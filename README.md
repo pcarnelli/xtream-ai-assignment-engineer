@@ -82,4 +82,5 @@ So, ready to add some sparkle to this challenge? Let's make these diamonds shine
 ---
 
 ## How to run
-Please fill this section as part of the assignment.
+
+So far, in the [notebooks](./notebooks/) folder, there is a Jupyter notebook named `challenge1.ipynb` with an EDA of the dataset. The notebook `challenge1.ipynb` should be run in a CONDA virtual environment built from the file `environment.yml` located in the same folder.
