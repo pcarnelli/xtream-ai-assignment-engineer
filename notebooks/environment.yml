@@ -1,4 +1,4 @@
-name: xtream2
+name: xtream-challenge1
 channels:
   - defaults
 dependencies:
@@ -10,4 +10,3 @@ dependencies:
   - conda-forge::ydata-profiling
   - scikit-learn
   - ipywidgets
-prefix: /home/paco/miniconda3/envs/xtream2
