@@ -83,4 +83,7 @@ So, ready to add some sparkle to this challenge? Let's make these diamonds shine
 
 ## How to run
 
-So far, in the [notebooks](./notebooks/) folder, there is a Jupyter notebook named `challenge1.ipynb` with an EDA of the dataset. The notebook `challenge1.ipynb` should be run in a CONDA virtual environment built from the file `environment.yml` located in the same folder.
+#### Challenge 1
+
+The requested Jupyter notebook, named `challenge1.ipynb`, is located in the folder [notebooks](./notebooks/). The notebook `challenge1.ipynb` can be run in a CONDA virtual environment built from the file `environment.yml`, located in the same folder. The current available version is the result of running the notebook in my local computer and it can be opened from github.  
+*Note*: As part of my workflow in the notebook, I performed an exploratory data analysis using the package [`ydata-profiling`](https://github.com/ydataai/ydata-profiling), which produces a report. For some reason, I still cannot find, the report is not displayed in github. As a workaround, I produced an html file of the report that can be found in the folder [notebooks](./notebooks/) (file `eda_report.html`). I am sorry for the inconvenience.
