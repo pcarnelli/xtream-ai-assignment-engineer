@@ -10,3 +10,4 @@ dependencies:
   - conda-forge::ydata-profiling
   - scikit-learn
   - ipywidgets
+  - conda-forge::imbalanced-learn
