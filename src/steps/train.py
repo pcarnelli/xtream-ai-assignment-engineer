@@ -2,7 +2,8 @@ import time
 import json
 from typing import Optional, Union, List
 from datetime import datetime
-import joblib
+#import joblib
+import dill
 import numpy as np
 import pandas as pd
 import scipy as sp
@@ -15,7 +16,9 @@ from sklearn.ensemble import GradientBoostingRegressor
 from imblearn.pipeline import Pipeline
 from imblearn import FunctionSampler
 
+
 # TODO: Docstrings
+
 
 TIMESTAMP_FMT = '%Y%m%d-%H:%M:%S'
 
@@ -77,7 +80,7 @@ def clean(X: Union[np.ndarray, pd.core.frame.DataFrame],
         return df_pre.drop(columns=[target]), df_pre[target]
 
 
-# Function for outlier detection (see EDA section)
+# Function for outlier detection
 def robust_mahalanobis_method(df: pd.core.frame.DataFrame) -> List[int]:
     
     # Minimum covariance determinant
@@ -212,8 +215,9 @@ def train(
     )
 
     if dump:
-        joblib.dump(model, f"models/pipeline{tag}.joblib")
-        json.dump(metrics, open(f"models/metrics{tag}.json", "w"))
+        dill.settings['recurse'] = True
+        dill.dump(model, open(f'models/pipeline{tag}.joblib', 'wb'))
+        json.dump(metrics, open(f'models/metrics{tag}.json', 'w'))
 
 
 if __name__ == '__main__':
