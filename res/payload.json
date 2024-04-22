@@ -1,0 +1,26 @@
+[
+  {
+    "carat": 1.1,
+    "cut": "Ideal",
+    "color": "H",
+    "clarity": "SI2",
+    "depth": 62,
+    "table": 55,
+    "price": 4733,
+    "x": 6.61,
+    "y": 6.65,
+    "z": 4.11
+  },
+  {
+    "carat": 1.29,
+    "cut": "Ideal",
+    "color": "H",
+    "clarity": "SI1",
+    "depth": 62.6,
+    "table": 56,
+    "price": 6424,
+    "x": 6.96,
+    "y": 6.93,
+    "z": 4.35
+  }
+]
