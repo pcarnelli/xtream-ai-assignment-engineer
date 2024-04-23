@@ -202,9 +202,9 @@ def train(
     score_test = model.score(X_test, y_test)
     time_train = time.time() - start
     
-    print(f"Train score: {score_train:.4f}")
-    print(f"Test score: {score_test:.4f}")
-    print(f"Elapsed time: {time_train:.2f}")
+    print(f'Train score: {score_train:.4f}')
+    print(f'Test score: {score_test:.4f}')
+    print(f'Elapsed time: {time_train:.2f}')
 
     metrics = dict(
         score_train = score_train,
