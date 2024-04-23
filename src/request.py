@@ -6,7 +6,7 @@ import json
 
 
 # Define the URL of your Flask API
-url = 'http://127.0.0.1:5000/predict'
+url = 'http://0.0.0.0:5000/predict'
 
 # Open input data as JSON file
 with open('res/payload.json') as f:
