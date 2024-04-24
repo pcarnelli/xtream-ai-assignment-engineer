@@ -85,6 +85,10 @@ So, ready to add some sparkle to this challenge? Let's make these diamonds shine
 
 #### Challenge 1
 
-The requested Jupyter notebook, named `challenge1.ipynb`, is located in the folder [notebooks](./notebooks/). The current uploaded version is the result of running the notebook in my local computer and it can be viewed directly from github*.  
-For running the notebook `challenge1.ipynb` the user can build a CONDA virtual environment from the file `environment.yml` or using `venv` (with `Python 3.11.9`) and installing the dependencies from the file `requirements.txt` with `pip`. Both files, `environment.yml` and `requirements.txt`, are also located in the folder [notebooks](./notebooks/).  
-*As part of my workflow in the notebook, I performed an exploratory data analysis using the package [`ydata-profiling`](https://github.com/ydataai/ydata-profiling), which produces a report. For some reason, I still cannot understand, the report is not displayed when viewing the notebook in github. As a workaround, I produced an HTML file of the report that can be found in the folder [reports](./notebooks/) (file `challenge1_eda_report.html`). I am sorry for the inconvenience.
+The requested Jupyter notebook, named `challenge1.ipynb`, is located in the folder [notebooks](./notebooks/). There are several options to view it or run it:
+
+1) View in github: The current uploaded version is the result of running the notebook in my local computer and it can be viewed directly from github. (With some caveats, as the `ydata profiling` reports not being displayed. See workaround in notebook).
+
+2) Run in virtual environment: For running the notebook `challenge1.ipynb` the user can build a CONDA virtual environment from the file `environment.yml` or using `venv` (with `Python 3.11.9`) and installing the dependencies from the file `requirements.txt` with `pip`. Both files, `environment.yml` and `requirements.txt`, are also located in the folder [notebooks](./notebooks/).
+
+3) View/run in Google Colab: An already-executed Colab version of the notebook is available [here](https://colab.research.google.com/drive/1ByfXGnLkESX_woyO5CHoV9ZvSlf4BT2U). *Note*: a Google account is needed to rerun the notebook.
