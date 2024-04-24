@@ -5,6 +5,7 @@ on:
     branches:
       #- master
       - test
+
     paths:
       - 'datasets/diamonds/*.csv'
 
