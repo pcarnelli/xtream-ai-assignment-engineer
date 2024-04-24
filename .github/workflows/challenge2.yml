@@ -3,8 +3,7 @@ name: Train
 on:
   push:
     branches:
-      #- master
-      - test
+      - master
 
     paths:
       - 'datasets/diamonds/*.csv'
