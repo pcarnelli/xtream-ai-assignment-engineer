@@ -91,4 +91,4 @@ The requested Jupyter notebook, named `challenge1.ipynb`, is located in the fold
 
 2) Run in virtual environment: For running the notebook `challenge1.ipynb` the user can build a CONDA virtual environment from the file `environment.yml` or using `venv` (with `Python 3.11.9`) and installing the dependencies from the file `requirements.txt` with `pip`. Both files, `environment.yml` and `requirements.txt`, are also located in the folder [notebooks](./notebooks/).
 
-3) View/run in Google Colab: An already-executed Colab version of the notebook is available [here](https://colab.research.google.com/drive/1ByfXGnLkESX_woyO5CHoV9ZvSlf4BT2U). *Note*: a Google account is needed to rerun the notebook.
+3) View/run in Google Colab: An already-executed Colab version of the notebook is available [here](https://colab.research.google.com/github/pcarnelli/xtream-ai-assignment-engineer/blob/main/notebooks/challenge1_colab.ipynb). *Note*: a Google account is needed to rerun the notebook.
