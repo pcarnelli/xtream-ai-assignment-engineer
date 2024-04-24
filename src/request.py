@@ -19,6 +19,7 @@ response = requests.post(url, json=data)
 if response.status_code == 200:
     # Parse and print the JSON response (assuming it contains the prediction)
     prediction = response.json()
+    json.dump(prediction, open(f'res/prediction.json', 'w'))
     print(prediction)
 else:
     # Handle the case where the API request failed
