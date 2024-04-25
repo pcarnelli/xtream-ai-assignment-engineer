@@ -6,7 +6,9 @@ pipeline consists in the following steps: 1) an ordinal encoder for the
 categorical features, 2) a function that removes observations (rows) with
 negative prices, null z values and/or outliers, 3) a column transformation
 that drops the x and y feature columns, and 4) a scikit-learn gradient boosting
-regressor.
+regressor. The script produces a model object named pipeline.joblib and a JSON
+file named metrics.json with train/test metrics, which are also printed on
+screen. These files are saved in the directory models.
 
 The provided dataset should be in CSV format and contain these named columns for
 features: 'carat', 'depth', 'table', 'x', 'y', 'z', 'cut', 'color', 'clarity'.
@@ -246,7 +248,7 @@ def train(
     Args:
         path (str, optional): Dataset location. Defaults to 'datasets/diamonds/diamonds.csv'.
         test_size (float, optional): Fraction of the dataset for testing. Defaults to 0.2.
-        dump (bool, optional): Indicates if the model object and a JSON file with metrics should be written to disk. Defaults to True.
+        dump (bool, optional): Indicates if the model object and a JSON file with metrics should be saved to disk. Defaults to True.
         numeric_features (Optional[List[str]], optional): List of names of the numeric features.
         categorical_features (Optional[List[str]], optional): List of names of the categorical features.
         categories (Optional[List[List[str]]], optional): Lists with the categories for each categorical feature. Defaults to None.

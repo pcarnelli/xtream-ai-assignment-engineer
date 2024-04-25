@@ -9,7 +9,7 @@ the following fields: 'carat', 'depth', 'table', 'x', 'y', 'z', 'cut', 'color',
 'clarity'. The payload can contain more than one item. The response is expected
 to be in JSON format with a field 'price' that contains a list with the
 prediction/s. If the request is successful (code 200), the response is printed
-and saved to disk (file res/prediction.json).
+on screen and saved to disk (file res/prediction.json).
 
 The following third-party packages are required: requests.
 
