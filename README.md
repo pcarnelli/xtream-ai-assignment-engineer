@@ -141,7 +141,7 @@ If issues arise during testing of the REST API, in the directory [docker/challen
 **Motivation for choices**:
 
 - *Scalability*: GCP services are designed to automatically scale to meet the demands of the data and computations, which is crucial for machine learning tasks.
-- *Fully Managed Services*: These services manage the underlying infrastructure, allowing us to focus on designing and implementing the models.
+- *Fully managed services*: These services manage the underlying infrastructure, allowing us to focus on designing and implementing the models.
 - *Integration*: All these services are well-integrated, which simplifies the process of moving data and models between different stages of the machine learning pipeline.
 - *Cost-effectiveness*: Since the infrastructure of the services adapts to the demand, GCP charge only for right amount of used resources.
 
