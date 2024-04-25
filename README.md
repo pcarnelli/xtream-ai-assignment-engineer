@@ -110,18 +110,39 @@ If issues arise during local testing of the script `train.py`, in the directory 
 
 #### Challenge 3
 
-The REST API is built with [Flask](https://flask.palletsprojects.com/) in the script `app.py` located in the directory [src/](./src/). It can be started from the project's root directory with the following CLI command:
+The REST API is built with [Flask](https://flask.palletsprojects.com/) in the script `app.py` located in the directory [src](./src/). It can be started from the project's root directory with the following CLI command:
 
     $ python src/app.py
 
-The script `request.py`, located in the directory [src/](./src/), can be used to test the REST API locally. This script can be executed from the project's root directory with the following CLI command:
+The script `request.py`, located in the directory [src](./src/), can be used to test the REST API locally. This script can be executed from the project's root directory with the following CLI command:
 
     $ python src/request.py
 
-The request contains a JSON data payload (read from file `res/payload.json`) with the following fields: 'carat', 'depth', 'table', 'x', 'y', 'z', 'cut', 'color', 'clarity'. The payload can contain more than one item. The response is expected to be in JSON format with a field 'price' that contains a list with the prediction/s. If the request is successful (code 200), the response is printed and saved to disk (file `res/prediction.json`).  
+The request contains a JSON data payload (read from file [res](./res/)/`payload.json`) with the following fields: 'carat', 'depth', 'table', 'x', 'y', 'z', 'cut', 'color', 'clarity'. The payload can contain more than one item. The response is expected to be in JSON format with a field 'price' that contains a list with the prediction/s. If the request is successful (code 200), the response is printed and saved to disk (file [res](./res/)/`prediction.json`).  
 Please, refer to the docstrings in the scripts for more information.  
 If issues arise during testing of the REST API, in the directory [docker/challenge3](./docker/challenge3/) there is a Dockerfile for building an image with the needed requirements. Run instructions can be found in the file `README.md` located in the same directory.
 
 ### Challenge 4
 
+**Choice of cloud provider**: Google Cloud Platform (GCP).
 
+**Architecture**:
+
+1) *Google Cloud Storage (GCS)*: GCS can be used to store the dataset. It provides worldwide, highly durable object storage that scales to exabytes of data. Data can be accessed instantly from any storage class, and storage can be integrated into custom applications with a single unified API.
+
+2) *Cloud Functions*: This is a good option for data preprocessing. It allows to deploy a custom script and the service is in charge of handling the operational infrastructure. It integrates wit other GCP services and can be part of an orchestrated pipeline. For this case I think it is not necessary to use more sophisticated options for preprocessing as DataPrep or Dataflow.
+
+3) *Vertex AI training and prediction*: This platform can be used for training the model. It supports distributed training and hyperparameter tuning to find the best model. It also provides a prediction service to host the trained model via the *Google AI Infrastructure*.
+
+4) *Google Cloud Composer (managed Apache Airflow)*: This can be used to orchestrate the pipeline, i.e., moving data from GCS to Cloud Functions, triggering model training in Vertex AI, and deploying the model in Google AI Infrastructure for prediction.
+
+5) *Google Cloud Monitoring and Logging*: These services can be used to monitor the training and prediction processes, and log crucial information for debugging and traceability.
+
+**Motivation for choices**:
+
+- *Scalability*: GCP services are designed to automatically scale to meet the demands of the data and computations, which is crucial for machine learning tasks.
+- *Fully Managed Services*: These services manage the underlying infrastructure, allowing us to focus on designing and implementing the models.
+- *Integration*: All these services are well-integrated, which simplifies the process of moving data and models between different stages of the machine learning pipeline.
+- *Cost-effectiveness*: Since the infrastructure of the services adapts to the demand, GCP charge only for right amount of used resources.
+
+I believe that this architecture provides a robust, scalable, and cost-effective solution for implementing an automated training pipeline and deploying a gradient boosting regressor for tabular data on GCP.
