@@ -84,7 +84,7 @@ unicodedata2==15.1.0
 urllib3==2.6.3
 visions==0.7.5
 wcwidth==0.2.5
-wheel==0.41.2
+wheel==0.46.2
 widgetsnbextension==4.0.10
 wordcloud==1.9.3
 ydata-profiling==0.0.dev0
