@@ -14,7 +14,7 @@ decorator==5.1.1
 executing==0.8.3
 fonttools==4.60.2
 htmlmin==0.1.12
-idna==3.7
+idna==3.15
 ImageHash==4.3.1
 imbalanced-learn==0.12.2
 importlib-metadata==7.0.1
